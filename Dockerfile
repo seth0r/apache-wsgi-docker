@@ -1,5 +1,8 @@
-FROM ubuntu:18.04
+FROM ubuntu:20.04
 MAINTAINER me+docker@seth0r.net
+
+ARG DEBIAN_FRONTEND=noninteractive
+ENV TZ=Europe/Berlin
 
 RUN apt-get update 
 RUN apt-get dist-upgrade -y
