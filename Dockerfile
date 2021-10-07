@@ -15,6 +15,7 @@ RUN a2enmod proxy
 RUN a2enmod proxy_http
 RUN a2enmod proxy_http2
 RUN a2enmod proxy_html
+RUN a2enmod remoteip
 RUN a2enmod wsgi
 RUN a2enmod ssl
 RUN a2dismod python
