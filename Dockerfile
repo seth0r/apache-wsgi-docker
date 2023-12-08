@@ -7,10 +7,11 @@ ENV TZ=Europe/Berlin
 RUN apt-get update 
 RUN apt-get dist-upgrade -y
 RUN apt-get -y install apache2 libapache2-mod-wsgi-py3 libapache2-mod-python vim python3-all python3-pip
-RUN apt-get -y install python3-cherrypy3 python3-jinja2 python3-pymongo python3-requests python3-pil python3-geoip
+RUN apt-get -y install python3-cherrypy3 python3-jinja2 python3-pymongo python3-requests python3-pil
 
 RUN pip3 install -U --force-reinstall pip
-RUN pip3 install python-geoip-geolite2
+RUN pip3 install maxminddb
+RUN pip3 install maxminddb-geolite2
 
 RUN mkdir -p /var/run/apache2
 
